@@ -12,7 +12,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Weather extends AsyncTask<String, Void, String> {
 
@@ -113,35 +112,29 @@ public class Weather extends AsyncTask<String, Void, String> {
 
             switch (weatherList.get(0)) {
                 case "Rain":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.rain);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.rain);
                     break;
                 case "Clear":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.clear);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.clear);
                     break;
                 case "Snow":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.snow);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.snow);
                     break;
                 case "Clouds":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.clouds);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.clouds);
                     break;
                 case "Thunderstorm":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.thunderstorm);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.thunderstorm);
                     break;
                 case "Drizzle":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.drizzle);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.drizzle);
                     break;
                 case "Mist":
                 case "Haze":
                 case "Fog":
-                    MainActivity.imageView.setBackgroundResource(R.drawable.mist);
+                    MainActivity.iconView.setBackgroundResource(R.drawable.mist);
                     break;
             }
-//            MainActivity.place.setText("City : " + place);
-//            MainActivity.temp1.setText("Day 1 temperature : " + temps.get(0) + " \u2103");
-//            MainActivity.temp2.setText("Day 2 temperature : " + temps.get(8) + " \u2103");
-//            MainActivity.temp3.setText("Day 3 temperature : " + temps.get(16) + " \u2103");
-//            MainActivity.temp4.setText("Day 4 temperature : " + temps.get(24) + " \u2103");
-//            MainActivity.temp5.setText("Day 5 temperature : " + temps.get(32) + " \u2103");
             MainActivity.forecastText.setText(resultText);
         } catch (JSONException e){
             e.printStackTrace();
