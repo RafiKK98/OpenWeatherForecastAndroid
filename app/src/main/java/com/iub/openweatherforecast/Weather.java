@@ -135,6 +135,7 @@ public class Weather extends AsyncTask<String, Void, String> {
                     MainActivity.iconView.setBackgroundResource(R.drawable.mist);
                     break;
             }
+            MainActivity.weatherMain.setText(weatherList.get(0));
             MainActivity.forecastText.setText(resultText);
         } catch (JSONException e){
             e.printStackTrace();

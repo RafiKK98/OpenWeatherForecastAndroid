@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static EditText CityEditText;
     public static TextView forecastText;
     public static ImageView iconView;
+    public static TextView weatherMain;
 
     public final String openweatherUrl = "https://api.openweathermap.org/data/2.5/forecast";
     public final String appid = "6a74d0568f1e312900c750047ab804ef";
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         CityEditText = findViewById(R.id.CityEditText);
         forecastText = findViewById(R.id.forecastText);
         iconView = findViewById(R.id.iconView);
+        weatherMain = findViewById(R.id.weatherMain);
         forecastText.setMovementMethod(new ScrollingMovementMethod());
     }
 

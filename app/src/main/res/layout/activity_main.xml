@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="20dp"
-        android:text="5-Day Forecast Check"/>
+        android:text="5-Day Forecast Check"
+        android:layout_marginBottom="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,12 +32,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
             android:id="@+id/FindCityBtn"
             android:layout_marginBottom="10dp"
-            android:background="#0070C7"
+            android:layout_gravity="center"
             android:textColor="@color/white"
             android:onClick="getForecastDetails"
             android:text="Find"
+            android:backgroundTint="@color/cardview_dark_background"
             />
 
         <ImageView
@@ -45,6 +48,16 @@
             android:layout_gravity="center"
             android:id="@+id/iconView"/>
 
+        <TextView
+            android:id="@+id/weatherMain"
+            android:layout_width="match_parent"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text=""
+            android:scrollbars="vertical"/>
         <TextView
             android:id="@+id/forecastText"
             android:layout_width="match_parent"
